@@ -106,19 +106,6 @@ UART settings: **115200-8N1**. On Linux the UART device is typically
 ./run_dhrystone_arty_a7.sh --no-program
 ```
 
-## Why 2,000,000 runs?
-
-The Dhrystone standard (and ARM's own methodology) mandates enough iterations
-that the working set fits entirely in cache and no cold-start effects inflate
-the score. The widely-cited threshold is **2 × 10⁶**:
-
-- Below ~100 k runs the timer resolution dominates and scores are meaningless.
-- Between 100 k–500 k runs, cache warm-up skew is still visible.
-- At **2,000,000** the benchmark is in steady state and results are directly
-  comparable to published ARM Cortex-M / Cortex-A figures.
-
-To override, pass `--runs N` (FPGA) or the first positional argument (sim).
-
 ## Porting notes
 
 `src/dhry_port.c` provides the three hooks Dhrystone 2.1 requires:

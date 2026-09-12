@@ -301,19 +301,6 @@ Open a terminal at `115200 8N1` (e.g. `/dev/ttyUSB1`) to observe the boot sequen
 Booting application...
 ```
 
----
-
-## Verification & Quality Assurance
-
-Gandiva's verification strategy ensures architectural correctness, interface compliance, and fault tolerance:
-
-1. **Dual-Execution Co-Simulation**: RTL execution trace is piped into `tools/cosim.py`, verifying retirement PC, instruction encoding, register destinations, and written values against `golden_rv32im.py`.
-2. **Formal Verification (RVFI)**: Built-in `RISCV_FORMAL` wrapper continuously monitors retirement invariants (monotonicity, zero-register immutability, program counter continuity).
-3. **Directed Negative Testing**: Every directed testbench pairs a positive functional test with load-bearing negative assertions (e.g., ensuring illegal PMP access raises an access fault, or verifying disabled timer interrupts stall FreeRTOS preemption).
-4. **Constrained-Random Stress Testing**: Automated instruction generator floods the pipeline with random sequences, testing corner-case hazard resolutions, pipeline stalls, and forwardings.
-
----
-
 ## Documentation
 
 Comprehensive architectural specifications, register maps, and peripheral integration guides are available in [`docs/`](docs) and can be viewed as an interactive site:
