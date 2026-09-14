@@ -17,7 +17,7 @@ The benchmark is compiled for a 32-bit RISC-V target with the `IMC` extensions (
 
 ## Performance Results
 
-Gandiva achieves a score of **1.64 DMIPS/MHz** across both simulation and FPGA execution.
+Gandiva achieves a score of **1.64 DMIPS/MHz** in simulation and **1.60 DMIPS/MHz** on FPGA execution.
 
 ### Simulation
 - **Environment**: Verilator testbench (`tb_gandiva`)
@@ -28,8 +28,9 @@ Gandiva achieves a score of **1.64 DMIPS/MHz** across both simulation and FPGA e
 ### FPGA (Arty A7-100T)
 - **Environment**: Bare-metal execution on the Arty A7 FPGA running at 25 MHz (or 100 MHz).
 - **Execution**: 2,000,000 iterations (industry standard)
-- **DMIPS/MHz**: 1.644
-- **Note**: The core is identical on FPGA and simulation, meaning the IPC (Instructions Per Cycle) and resulting DMIPS/MHz score are exactly identical. Absolute runtime and total DMIPS scale linearly with the physical clock frequency.
+- **DMIPS**: ~40.1 (at 25 MHz)
+- **DMIPS/MHz**: 1.602
+- **Note**: The core is identical on FPGA and simulation, but the FPGA SoC linker script maps all memory to a unified BRAM at `0x0000_0000`, unlike the simulation which separates IMEM and DRAM. This slight difference in data address layout results in a very minor variance in instruction scheduling and branching, yielding ~1.60 DMIPS/MHz on FPGA versus ~1.64 in simulation.
 
 ---
 

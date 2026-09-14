@@ -91,7 +91,7 @@ ldflags="-O2 -march=rv32imc_zicsr -mabi=ilp32 -Wl,--gc-sections -static \
   -T${CONFIG_DIR}/link_fpga.ld -nostartfiles ${CONFIG_DIR}/start.S"
 
 echo "Building benchmarks (scons)..."
-scons --config-dir="${CONFIG_DIR}" \
+scons -f sconstruct.py --config-dir="${CONFIG_DIR}" \
       --build-dir="${BUILD_DIR}" \
       cc="${GCC}" \
       cflags="${cflags}" \
