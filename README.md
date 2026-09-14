@@ -228,6 +228,8 @@ The unified driver `./build.sh` provides one-line commands for testing individua
 
 ## Running Benchmarks
 
+> If you are on a fresh clone or a new device, you must build the Verilator simulator first by running `./build.sh` from the repository root.
+
 ### CoreMark
 
 To compile and run CoreMark in Verilator simulation:

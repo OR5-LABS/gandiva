@@ -9,6 +9,7 @@ import math
 import fcntl
 import time
 
+# pyrefly: ignore [missing-import]
 from embench_core import log
 
 cycle_counts = []

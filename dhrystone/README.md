@@ -57,6 +57,8 @@ hardware required.
 
 ### Quick start
 
+> Before running the simulation benchmark on a fresh repository, you must first compile the Verilator simulator by running `./build.sh` in the root of the repository.
+
 ```bash
 # Industry-standard 2 000 000 iterations (default)
 ./run_dhrystone.sh

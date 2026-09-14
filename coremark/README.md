@@ -33,6 +33,8 @@ Gandiva achieves a score of **2.41 CoreMark/MHz** across both simulation and FPG
 
 ## Usage
 
+> Before running the simulation benchmark, you must first compile the Verilator simulator by running `./build.sh` in the root of the repository.
+
 - To run full 1000-iteration test in the Verilator simulation:
   ```bash
   ./run_coremark.sh
