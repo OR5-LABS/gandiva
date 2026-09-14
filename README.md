@@ -119,7 +119,7 @@ Synthesis and implementation were performed using **AMD Vivado 2023.2** targetin
 
 - **SoC Subsystem Includes**: Gandiva Core, 64 KB dual-port BRAM memory subsystem, Memory-Mapped CLINT Timer, 115200 Baud UART, and GPIO peripheral controllers.
 - **Achievable Frequency**: Timing passes comfortably at 25 MHz with `+5.12 ns` positive slack on Artix-7 speed grade -1 (achievable $F_{\text{max}} \gt 30\text{ MHz}$).
-- **Target Boards Supported**: Digilent Arty A7-100T (Artix-7) and AMD Xilinx ZCU102 (Zynq UltraScale+).
+- **Target Board Supported**: Digilent Arty A7-100T (Artix-7).
 
 ---
 
@@ -157,7 +157,6 @@ gandiva/
 ├── embench/                    # Official Embench IoT benchmark suite harness
 ├── fpga/                       # FPGA project scripts, XDC constraints, and evaluation reports
 │   ├── arty_a7/                # Digilent Arty A7-100T board project
-│   ├── zcu102/                 # Xilinx ZCU102 UltraScale+ board project
 │   └── eval_results/           # Vivado post-implementation timing & utilization reports
 ├── rtos/                       # FreeRTOS port, BSP, and automated preemption test
 ├── docs/                       # Complete documentation site (MkDocs)
@@ -228,6 +227,8 @@ The unified driver `./build.sh` provides one-line commands for testing individua
 ---
 
 ## Running Benchmarks
+
+> If you are on a fresh clone or a new device, you must build the Verilator simulator first by running `./build.sh` from the repository root.
 
 ### CoreMark
 
