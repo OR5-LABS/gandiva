@@ -16,8 +16,9 @@ if ! command -v "$GCC" &>/dev/null; then
     fi
 fi
 
-if [ ! -d "embench-iot" ]; then
+if [ ! -d "embench-iot/.git" ]; then
     echo "Cloning Embench IoT repository..."
+    rm -rf embench-iot
     git clone https://github.com/embench/embench-iot.git embench-iot
 fi
 
