@@ -88,13 +88,13 @@ Gandiva has been evaluated across industry-standard embedded benchmarks in bare-
 
 ### Dhrystone v2.1
 
-| Metric | FPGA (Arty A7 @ 50 MHz) |
+| Metric | FPGA (Arty A7 @ 25 MHz) |
 | :--- | :--- |
 | Iterations | 2,000,000 |
-| Total cycles | 692,352,961 |
-| Cycles / iteration | 346.2 |
-| Dhrystones / sec / MHz | 2,889 |
-| DMIPS / MHz | **1.644** |
+| Microseconds / run | 14 |
+| Dhrystones / sec | 70,422 |
+| DMIPS | 40.080 |
+| DMIPS / MHz | **1.602** |
 
 ### Embench IoT
 
