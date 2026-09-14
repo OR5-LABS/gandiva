@@ -82,8 +82,8 @@ Gandiva has been evaluated across industry-standard embedded benchmarks in bare-
 | Metric | FPGA (Arty A7 @ 50 MHz) |
 | :--- | :--- |
 | Iterations | 1,000 |
-| Total cycles | 414,937,759 |
-| Cycles / iteration | 414,937.8 |
+| Total cycles | 414,036,000 |
+| Cycles / iteration | 414,036 |
 | CoreMark / MHz | **2.41** |
 
 ### Dhrystone v2.1

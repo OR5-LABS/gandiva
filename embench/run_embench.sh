@@ -46,7 +46,7 @@ CONFIG_DIR=$(realpath ../config/gandiva)
 cflags="-O2 -ffunction-sections -fdata-sections -march=rv32imc_zicsr -mabi=ilp32"
 ldflags="-O2 -march=rv32imc_zicsr -mabi=ilp32 -Wl,--gc-sections -static -T${CONFIG_DIR}/link.ld -nostartfiles ${CONFIG_DIR}/start.S"
 
-scons --config-dir="${CONFIG_DIR}" \
+scons -f sconstruct.py --config-dir="${CONFIG_DIR}" \
       --build-dir=bd-riscv-speed \
       cc="${GCC}" \
       cflags="${cflags}" \
