@@ -98,11 +98,11 @@ Gandiva has been evaluated across industry-standard embedded benchmarks in bare-
 
 ### Embench IoT
 
-| Metric | FPGA (Arty A7 @ 50 MHz) |
+| Metric | FPGA (Arty A7 @ 25 MHz) |
 | :--- | :--- |
 | Workloads | 19 |
-| Geometric mean cycles | 4,049,170.2 |
-| Geomean / MHz | **0.96** |
+| Geometric mean cycles | 4,169,664 |
+| Geomean / MHz | **0.97** |
 
 ---
 
