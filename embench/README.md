@@ -23,37 +23,37 @@ Gandiva achieves a geometric mean score of **0.96 Embench Speed/MHz** across all
 
 | Benchmark | Speed | Speed/MHz |
 | --------- | ----- | --------- |
-| aha-mont64 | 28.95 | 0.58 |
+| aha-mont64 | 28.25 | 0.57 |
 | crc32 | 44.23 | 0.88 |
 | depthconv | 32.25 | 0.65 |
 | edn | 35.09 | 0.70 |
-| huffbench | 64.11 | 1.28 |
+| huffbench | 64.00 | 1.28 |
 | matmult-int | 53.86 | 1.08 |
-| md5sum | 63.93 | 1.28 |
+| md5sum | 57.61 | 1.15 |
 | nettle-aes | 33.63 | 0.67 |
-| nettle-sha256 | 31.68 | 0.63 |
+| nettle-sha256 | 31.67 | 0.63 |
 | nsichneu | 49.74 | 0.99 |
 | picojpeg | 42.15 | 0.84 |
 | qrduino | 44.62 | 0.89 |
 | sglib-combined | 50.99 | 1.02 |
-| slre | 61.03 | 1.22 |
-| statemate | 88.69 | 1.77 |
-| tarfind | 78.91 | 1.58 |
-| ud | 38.69 | 0.77 |
-| wikisort | 97.91 | 1.96 |
+| slre | 60.99 | 1.22 |
+| statemate | 88.45 | 1.77 |
+| tarfind | 80.49 | 1.61 |
+| ud | 38.75 | 0.77 |
+| wikisort | 98.77 | 1.98 |
 | xgboost | 35.23 | 0.70 |
-| **Geometric mean** | **48.14** | **0.96** |
+| **Geometric mean** | **47.87** | **0.96** |
 
 ### Simulation
 - **Environment**: Verilator testbench (`tb_gandiva`)
 - **Execution**: Embench standard Python test harness (`benchmark_speed.py`)
-- **Geometric Mean (Relative Speed)**: 48.14
+- **Geometric Mean (Relative Speed)**: 47.87
 - **Geometric Mean (Speed/MHz)**: 0.96
 
 ### FPGA (Arty A7-100T)
 - **Environment**: Bare-metal execution on the Arty A7 FPGA running at 25 MHz.
 - **Execution**: Embench standard Python test harness (`benchmark_speed.py`)
-- **Geometric Mean (Speed/MHz)**: 0.96
+- **Geometric Mean (Speed/MHz)**: 0.97
 
 
 ## Directory Layout
